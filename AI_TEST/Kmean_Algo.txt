@@ -1,0 +1,6 @@
++ Bước 1: Khởi tạo K điểm dữ lieuj trong bộ dữ liệu và tạm thời coi nó là tâm của các cụm dữ liệu của chúng ta
++ Bước 2: Với mỗi điểm dữ liệu trong bộ dữ liệu, tâm cụm của nó sẽ được xác định là 1 trong K tâm cụm gần nó nhất 
++ Bước 3: Sau khi tất cả các điểm dữ liệu đã có tâm, tính toán lại vị trí của tâm cụm để đảm bảo tâm của các cụm
+nằm chính giữa cụm
++ Bước 4: Bước 2 và bước 3 sẽ được lặp đi lặp lại cho tới khi vị trí của tâm cụm không thay đổi hoặc tâm của 
+tất cả các điểm dữ liệu không thay đổi 
