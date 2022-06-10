@@ -59,34 +59,37 @@ class Graph:
 
 
 list_node = {
-    'A': [('B', 2), ('C', 1), ('D', 3)],
-    'B': [('E', 5), ('F', 4)],
-    'C': [('G', 6), ('H', 3)],
-    'D': [('I', 2), ('J', 4)],
-    'F': [('K', 2), ('L', 1), ('M', 4)],
-    'H': [('N', 2), ('O', 4)],
+    'S': [('A', 5), ('B', 6), ('C', 5)],
+    'A': [('D', 6), ('E', 7)],
+    'B': [('F', 3), ('G', 4)],
+    'C': [('H', 6), ('K', 4)],
+    'D': [('M', 5), ('N', 8)],
+    'E': [('I', 8)],
+    'F': [('J', 4), ('L', 4)],
+    'K': [('Z', 2)],
 }
 
 graph = Graph(list_node)
 
-graph.set_heuristic('A', 6)
-graph.set_heuristic('B', 3)
-graph.set_heuristic('C', 4)
-graph.set_heuristic('D', 5)
-graph.set_heuristic('E', 3)
-graph.set_heuristic('F', 1)
-graph.set_heuristic('G', 6)
-graph.set_heuristic('H', 2)
-graph.set_heuristic('I', 5)
-graph.set_heuristic('J', 4)
-graph.set_heuristic('K', 2)
+graph.set_heuristic('S', 12)
+graph.set_heuristic('A', 7)
+graph.set_heuristic('B', 8)
+graph.set_heuristic('C', 9)
+graph.set_heuristic('D', 6)
+graph.set_heuristic('E', 5)
+graph.set_heuristic('F', 4)
+graph.set_heuristic('G', 10)
+graph.set_heuristic('H', 10)
+graph.set_heuristic('I', 6)
+graph.set_heuristic('J', 0)
+graph.set_heuristic('K', 3)
 graph.set_heuristic('L', 0)
-graph.set_heuristic('M', 4)
-graph.set_heuristic('N', 0)
-graph.set_heuristic('O', 4)
+graph.set_heuristic('M', 9)
+graph.set_heuristic('N', 10)
+graph.set_heuristic('Z', 8)
 
 
-result = graph.a_star_algorithm('A', 'O')
+result = graph.a_star_algorithm('S', 'L')
 if result:
 
     s = 'explored: '
